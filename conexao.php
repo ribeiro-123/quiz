@@ -9,8 +9,6 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     // Definir o modo de erro do PDO para exceções
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Conexão bem-sucedida!";
-
 } catch (PDOException $e) {
     // Em caso de erro, exibir uma mensagem de erro
     die("Erro de conexão com o banco de dados: " . $e->getMessage());
