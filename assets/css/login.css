@@ -1,0 +1,65 @@
+/* Cadastro - Estilo Personalizado */
+body {
+    background-color: #e8f6f7; /* Azul celeste claro */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4c9cd8; /* Azul celeste mais escuro */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Formatação dos inputs */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+/* Foco nos campos de input */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+select:focus {
+    border-color: #4c9cd8;
+    outline: none;
+}
+
+/* Botão de envio */
+input[type="submit"] {
+    background-color: #4c9cd8;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito no botão */
+input[type="submit"]:hover {
+    background-color: #3686b2;
+}
+
+p {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+}
