@@ -2,6 +2,7 @@
 session_start();
 require_once 'conexao.php';
 
+
 $mensagem = '';
 $sucesso = false;
 
@@ -68,13 +69,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="manifest" href="manifest.json">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body class="bg-dark text-light">
-
-    <div class="container mt-5">
-        <h2 class="text-center text-primary">Cadastro</h2>
+<body class="card bg-dark text-light">
+    <?php include 'header.php'; ?> <!-- Cabeçalho padrão -->
+    <div class="card-body">
+        <img src="/assets/img/logo.png" id="logo" class="rounded mx-auto d-block" alt="logo">
+        <h2 class="text-center">Cadastro</h2>
         <form action="cadastro.php" method="POST">
             <div class="mb-3">
                 <input type="text" class="form-control" name="nome_completo" placeholder="Nome Completo" required>
@@ -96,8 +100,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="mb-3">
                 <input type="password" class="form-control" name="confirmar_senha" placeholder="Confirmar Senha" value="12345678" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+            <button type="submit" class="btn btn-primary w-100" id="btn-submit">Cadastrar</button>
         </form>
+        <p class="text-center mt-3">
+            Já possui um conta? <a href="login.php" class="text-info">Faça login</a>
+        </p>
     </div>
 
     <script>

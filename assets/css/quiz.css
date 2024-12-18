@@ -1,0 +1,112 @@
+html, body{
+  margin: 0;
+  font-family: Arial;
+}
+
+header, footer, main{
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  background-color: #777;
+}
+.info{
+  flex: 1;
+  background-color: #1cb0f6;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  background-color: #fff;
+}
+
+section#perguntas{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0 10px 0;
+  height: 20vh;
+  background-color: #fff;
+}
+
+div.pergunta{
+  padding: 4px 4px 0 0;
+  font-size: 11pt;
+  text-align: justify-all;
+  border-bottom: 2px solid #1cb0f6;  
+}
+
+section#alternativas{
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  background-color: #fff;
+}
+
+section#alternativas .questoes{
+  display: flex;            /* Ativa o Flexbox */
+  justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;      /* Centraliza o conteúdo verticalmente */
+  flex: 1;
+  width: 97vw;
+  min-height: 50px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 6px 0 0 6px;
+  background-color: #fff;
+  border-top: 1px solid #1cb0f6;
+  border-right: 1.3px solid #1cb0f6;
+  border-left: 1.3px solid #1cb0f6;
+  border-bottom: 2.5px solid #1cb0f6;
+  user-select: none;
+}
+
+#avatar{
+  flex: 3;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+  width: 100%; /* A largura da imagem será ajustada para 100% da div */
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer, se necessário */
+}
+
+section#perguntas div.pergunta{ flex: 7;}
+
+
+footer{
+  position: fixed;
+  height: 9vh;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer div.info{
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  user-select: none;
+/*  border-top: 1px solid rgb(229, 229, 229);*/
+}
+footer div.info a{
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+  user-select: none;
+}
+footer div.info a img{
+  height: 90%;
+  user-select: none;
+}
+footer div.info a span#avisos{
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
